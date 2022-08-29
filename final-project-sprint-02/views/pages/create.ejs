@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+    <form action="/" method="post">
+        <label for="start">Trip Name:</label>
+        <input type="text" id="name" name="name" required  minlength="4" maxlength="8" size="10">
+        <label for="start">Destination</label>
+        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+        <label for="trans">Transportation</label>
+        <select name="trans" id="trans">
+            <option value="dog">Plane</option>
+            <option value="cat">Train</option>
+            <option value="hamster">Car</option>
+        </select>
+        <label for="start">Start date:</label>
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2010-01-01" max="2026-12-31">
+        <label for="end">End date:</label>
+        <input type="date" id="end" name="trip-start" value="2018-07-22" min="2010-01-01" max="2026-12-31">
+    </form>
+</body>
+</html>

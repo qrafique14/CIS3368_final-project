@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+    <div class="col-lg-4 col-md-6 mb-4" ">
+    <% trips.forEach(function(trip) { %>
+        
+        <div class="card" style="margin: 10px;">
+            <div class="card-body">
+              <h5 class="card-title"><%= trip['tripname'] %></h5>
+              <p class="card-text">Desination - <%= trip['destID'] %> and the transportion - <%= trip['transportation'] %></p>
+            <form action="/edit" method="post">
+                <p name="id"><%= trip['id'] %> </p>
+                <button type="button">Edit</button>
+            </form>
+            </div>
+          </div>
+        
+    <% }); %>
+</div>
+</body>
+</html>
